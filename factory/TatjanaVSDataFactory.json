@@ -1,0 +1,9 @@
+{
+	"name": "TatjanaVSDataFactory",
+	"location": "germanywestcentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "271f4600-9102-450d-ace0-294ee52db51f",
+		"tenantId": "3fcb2536-235d-4763-a831-614f31dd9141"
+	}
+}
