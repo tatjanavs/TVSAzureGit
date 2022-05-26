@@ -1,0 +1,12 @@
+{
+	"name": "AzureSynapseAnalytics_linkedService",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDW",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=tvs-synapse-workspace.sql.azuresynapse.net;initial catalog=tvsdedicatedSQlPool;user id=TVS_ADF_user",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDM5QzQ2ODVGLUE2RjgtNDk0OS05QTc4LURDN0VCMEM1QTE4RV9jYmRhZjY5OS1mNmZjLTQ3Y2MtYTZjNC1mYWMyZDg0ZDI4MGEiDQp9"
+		}
+	}
+}
