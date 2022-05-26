@@ -84,6 +84,13 @@
 						"referenceName": "dataflowBlob_transform",
 						"type": "DataFlowReference"
 					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "AzureBlobStorage1",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "blobc1"
+					},
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"
