@@ -74,10 +74,16 @@
 				"     updateable:false,",
 				"     upsertable:false,",
 				"     format: 'table',",
-				"     staged: true,",
+				"     staged: false,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> DWStream"
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          PrimaryGenre,",
+				"          numberOfItems,",
+				"          topItem,",
+				"          bottomItem",
+				"     )) ~> DWStream"
 			]
 		}
 	}
