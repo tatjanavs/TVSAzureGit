@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "AzureTransformedBlob",
+						"referenceName": "AzureSynapseAnalytics_SinkTable",
 						"type": "DatasetReference"
 					},
 					"name": "DWStream"
@@ -69,13 +69,15 @@
 				"aggregate1 alterRow(upsertIf(true())) ~> alterRow1",
 				"alterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     input(",
-				"          Column_1 as string,",
-				"          Column_2 as string,",
-				"          Column_3 as string",
-				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     staged: true,",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> DWStream"
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> DWStream"
 			]
 		}
 	}

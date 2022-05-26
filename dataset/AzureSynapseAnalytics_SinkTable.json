@@ -1,0 +1,16 @@
+{
+	"name": "AzureSynapseAnalytics_SinkTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSynapseAnalytics_linkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "wwi_staging",
+			"table": "ADFUsers"
+		}
+	}
+}
