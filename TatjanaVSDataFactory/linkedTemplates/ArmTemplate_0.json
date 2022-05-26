@@ -370,7 +370,13 @@
 						"     staged: true,",
 						"     skipDuplicateMapInputs: true,",
 						"     skipDuplicateMapOutputs: true,",
-						"     errorHandlingOption: 'stopOnFirstError') ~> DWStream"
+						"     errorHandlingOption: 'stopOnFirstError',",
+						"     mapColumn(",
+						"          PrimaryGenre,",
+						"          numberOfItems,",
+						"          topItem,",
+						"          bottomItem",
+						"     )) ~> DWStream"
 					]
 				}
 			},
